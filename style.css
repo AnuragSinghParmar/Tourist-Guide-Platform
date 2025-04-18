@@ -1,0 +1,201 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.video-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h1 {
+    font-size: 48px;
+    margin-bottom: auto;
+    margin-top: 100px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+.category-bar {
+    position: absolute;
+    bottom: 100px; /* not too low */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    z-index: 3;
+}
+
+
+
+.category-bar button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7); /* dark background */
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-bar button:hover {
+    background-color: #ff9800; /* bold orange on hover */
+    color: white;
+    border-color: #ff9800;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* solid black */
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff9800;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000; /* solid black */
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    z-index: 2;
+}
+.page-container {
+    padding: 100px 40px 60px; /* enough space from top */
+    background: #f4f4f4;
+    min-height: 100vh;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.attraction-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.attraction-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.attraction-card h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.attraction-card p {
+    font-size: 14px;
+    padding: 0 15px;
+    color: #555;
+}
+
+.guides-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.guide-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.guide-card img {
+    width: 300px; /* Enlarge image */
+    height: auto;
+    border-radius: 10px;
+}
+
+.guide-info {
+    flex: 1;
+    text-align: left;
+}
+
+.guide-card.reverse {
+    flex-direction: row-reverse; /* Flip layout */
+}
